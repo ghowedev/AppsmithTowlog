@@ -5,12 +5,12 @@
   "borderColor": "#f4f4f5",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": 1,
-  "bottomRow": 76,
+  "bottomRow": 45,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 670,
+      "bottomRow": 650,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -56,7 +56,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 670,
+      "bottomRow": 360,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -102,7 +102,7 @@
     },
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 670,
+      "bottomRow": 360,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
@@ -145,7 +145,7 @@
       "widgetName": "Canvas5"
     }
   ],
-  "defaultTab": "PPI/REPO",
+  "defaultTab": "testing",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -173,7 +173,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 45,
+  "originalBottomRow": 76,
   "originalTopRow": 5,
   "parentColumnSpace": 20.125,
   "parentId": "0",
