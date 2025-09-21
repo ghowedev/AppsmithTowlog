@@ -1,0 +1,72 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 34,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{{ { \n    \"data\": Police_Tow_Display.data,\n    \"selectedRow\": {} \n} }}\n",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultModel"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onRowClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowClick"
+    }
+  ],
+  "events": [
+    "onRowClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "mdb2dlttdx",
+  "leftColumn": 10,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 34,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 31,
+  "mobileTopRow": 4,
+  "needsErrorInfo": false,
+  "onRowClick": "{{ showModal(Modal1.name); }}",
+  "parentColumnSpace": 19.8125,
+  "parentId": "k3zq1ca5rb",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 55,
+  "srcDoc": {
+    "css": ".app {\n  height: calc(var(--appsmith-ui-height) * 1px);\n  width: calc(var(--appsmith-ui-width) * 1px);\n  justify-content: center;\n  border-radius: var(--appsmith-theme-borderRadius);\n  box-shadow: var(--appsmith-theme-boxShadow);\n  padding: 29px 25px;\n  box-sizing: border-box;\n  font-family: system-ui;\n  background: #fff;\n}\n\n.tip-container {\n  margin-bottom: 20px;\n  font-size: 14px;\n  line-height: 1.571429;\n}\n\n.tip-container h2 {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 700;\n}\n\n.tip-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  margin-bottom: 9px;\n}\n\n.tip-header div {\n  color: #999;\n}\n\n.content {\n  white-space: pre-wrap;\n  word-break: break-word;\n  font-size: 14px;\n  line-height: 1.571429;\n}\n\n.button-container {\n  text-align: right;\n  padding-top: 4px;\n}\n\n.button-container button {\n  margin: 0 10px;\n  cursor: pointer;\n  border-radius: var(--appsmith-theme-borderRadius);\n  padding: 6px 16px;\n  background: none;\n  height: auto;\n  transition: all 0.3s ease;\n}\n\n.button-container button.primary {\n  background: var(--appsmith-theme-primaryColor) !important;\n  color: #fff;\n  border: 1px solid var(--appsmith-theme-primaryColor) !important;\n}\n\n.button-container button.reset {\n  border: 1px solid #999;\n  color: #999;\n  outline: none;\n  box-shadow: none;\n}\n\n.button-container button.reset:hover:not(:disabled) {\n  color: var(--appsmith-theme-primaryColor);\n  border-color: var(--appsmith-theme-primaryColor);\n}\n\n.button-container button.reset:disabled {\n  cursor: default;\n}",
+    "html": "<!-- no need to write html, head, body tags, it is handled by the widget -->\n<div id=\"root\"></div>\n",
+    "js": "import React from \"https://esm.sh/react@18.2.0\";\nimport ReactDOM from \"https://esm.sh/react-dom@18.2.0\";\nfunction CustomTable({\n  data,\n  triggerEvent\n}) {\n  return /*#__PURE__*/React.createElement(\"table\", {\n    style: {\n      width: \"100%\",\n      borderCollapse: \"collapse\",\n      fontFamily: \"Arial, sans-serif\"\n    }\n  }, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", {\n    style: {\n      backgroundColor: \"#2c3e50\",\n      color: \"white\",\n      textAlign: \"left\"\n    }\n  }, /*#__PURE__*/React.createElement(\"th\", {\n    style: {\n      padding: \"8px\"\n    }\n  }, \"Plate\"), /*#__PURE__*/React.createElement(\"th\", {\n    style: {\n      padding: \"8px\"\n    }\n  }, \"Make\"), /*#__PURE__*/React.createElement(\"th\", {\n    style: {\n      padding: \"8px\"\n    }\n  }, \"Model\"), /*#__PURE__*/React.createElement(\"th\", {\n    style: {\n      padding: \"8px\"\n    }\n  }, \"Color\"), /*#__PURE__*/React.createElement(\"th\", {\n    style: {\n      padding: \"8px\"\n    }\n  }, \"Date\"), /*#__PURE__*/React.createElement(\"th\", {\n    style: {\n      padding: \"8px\"\n    }\n  }, \"Time\"))), /*#__PURE__*/React.createElement(\"tbody\", null, Array.isArray(data) && data.map((row, i) => /*#__PURE__*/React.createElement(\"tr\", {\n    key: i,\n    style: {\n      cursor: \"pointer\",\n      backgroundColor: i % 2 === 0 ? \"#f9f9f9\" : \"white\"\n    },\n    onClick: () => {\n      appsmith.updateModel({\n        selectedRow: row\n      });\n      triggerEvent(\"onRowClick\", row);\n    }\n  }, /*#__PURE__*/React.createElement(\"td\", {\n    style: {\n      padding: \"8px\",\n      borderBottom: \"1px solid #ddd\"\n    }\n  }, row.licenseplate), /*#__PURE__*/React.createElement(\"td\", {\n    style: {\n      padding: \"8px\",\n      borderBottom: \"1px solid #ddd\"\n    }\n  }, row.make), /*#__PURE__*/React.createElement(\"td\", {\n    style: {\n      padding: \"8px\",\n      borderBottom: \"1px solid #ddd\"\n    }\n  }, row.model), /*#__PURE__*/React.createElement(\"td\", {\n    style: {\n      padding: \"8px\",\n      borderBottom: \"1px solid #ddd\"\n    }\n  }, row.color), /*#__PURE__*/React.createElement(\"td\", {\n    style: {\n      padding: \"8px\",\n      borderBottom: \"1px solid #ddd\"\n    }\n  }, row.date), /*#__PURE__*/React.createElement(\"td\", {\n    style: {\n      padding: \"8px\",\n      borderBottom: \"1px solid #ddd\"\n    }\n  }, row.time)))));\n}\nappsmith.onReady(() => {\n  const root = document.getElementById(\"root\");\n  ReactDOM.render(/*#__PURE__*/React.createElement(CustomTable, {\n    data: appsmith.model.data,\n    triggerEvent: appsmith.triggerEvent\n  }), root);\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 4,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": ".app {\n  height: calc(var(--appsmith-ui-height) * 1px);\n  width: calc(var(--appsmith-ui-width) * 1px);\n  justify-content: center;\n  border-radius: var(--appsmith-theme-borderRadius);\n  box-shadow: var(--appsmith-theme-boxShadow);\n  padding: 29px 25px;\n  box-sizing: border-box;\n  font-family: system-ui;\n  background: #fff;\n}\n\n.tip-container {\n  margin-bottom: 20px;\n  font-size: 14px;\n  line-height: 1.571429;\n}\n\n.tip-container h2 {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 700;\n}\n\n.tip-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n  margin-bottom: 9px;\n}\n\n.tip-header div {\n  color: #999;\n}\n\n.content {\n  white-space: pre-wrap;\n  word-break: break-word;\n  font-size: 14px;\n  line-height: 1.571429;\n}\n\n.button-container {\n  text-align: right;\n  padding-top: 4px;\n}\n\n.button-container button {\n  margin: 0 10px;\n  cursor: pointer;\n  border-radius: var(--appsmith-theme-borderRadius);\n  padding: 6px 16px;\n  background: none;\n  height: auto;\n  transition: all 0.3s ease;\n}\n\n.button-container button.primary {\n  background: var(--appsmith-theme-primaryColor) !important;\n  color: #fff;\n  border: 1px solid var(--appsmith-theme-primaryColor) !important;\n}\n\n.button-container button.reset {\n  border: 1px solid #999;\n  color: #999;\n  outline: none;\n  box-shadow: none;\n}\n\n.button-container button.reset:hover:not(:disabled) {\n  color: var(--appsmith-theme-primaryColor);\n  border-color: var(--appsmith-theme-primaryColor);\n}\n\n.button-container button.reset:disabled {\n  cursor: default;\n}",
+    "html": "<!-- no need to write html, head, body tags, it is handled by the widget -->\n<div id=\"root\"></div>\n",
+    "js": "import React from \"https://esm.sh/react@18.2.0\";\nimport ReactDOM from \"https://esm.sh/react-dom@18.2.0\";\n\nfunction CustomTable({ data, triggerEvent }) {\n  return (\n    <table style={{ width: \"100%\", borderCollapse: \"collapse\", fontFamily: \"Arial, sans-serif\" }}>\n      <thead>\n        <tr style={{ backgroundColor: \"#2c3e50\", color: \"white\", textAlign: \"left\" }}>\n          <th style={{ padding: \"8px\" }}>Plate</th>\n          <th style={{ padding: \"8px\" }}>Make</th>\n          <th style={{ padding: \"8px\" }}>Model</th>\n          <th style={{ padding: \"8px\" }}>Color</th>\n          <th style={{ padding: \"8px\" }}>Date</th>\n          <th style={{ padding: \"8px\" }}>Time</th>\n        </tr>\n      </thead>\n      <tbody>\n        {Array.isArray(data) && data.map((row, i) => (\n          <tr\n  key={i}\n  style={{ cursor: \"pointer\", backgroundColor: i % 2 === 0 ? \"#f9f9f9\" : \"white\" }}\n  onClick={() => {\n    appsmith.updateModel({ selectedRow: row });\n    triggerEvent(\"onRowClick\", row);\n  }}\n>\n  <td style={{ padding: \"8px\", borderBottom: \"1px solid #ddd\" }}>{row.licenseplate}</td>\n  <td style={{ padding: \"8px\", borderBottom: \"1px solid #ddd\" }}>{row.make}</td>\n  <td style={{ padding: \"8px\", borderBottom: \"1px solid #ddd\" }}>{row.model}</td>\n  <td style={{ padding: \"8px\", borderBottom: \"1px solid #ddd\" }}>{row.color}</td>\n  <td style={{ padding: \"8px\", borderBottom: \"1px solid #ddd\" }}>{row.date}</td>\n  <td style={{ padding: \"8px\", borderBottom: \"1px solid #ddd\" }}>{row.time}</td>\n</tr>\n\n        ))}\n      </tbody>\n    </table>\n  );\n}\n\nappsmith.onReady(() => {\n  const root = document.getElementById(\"root\");\n  ReactDOM.render(\n    <CustomTable data={appsmith.model.data} triggerEvent={appsmith.triggerEvent} />,\n    root\n  );\n});\n"
+  },
+  "version": 1,
+  "widgetId": "ya913fzu6e",
+  "widgetName": "reacttable"
+}

@@ -1,0 +1,1 @@
+SELECT * FROM public."tows_ppirepo" LIMIT 10;

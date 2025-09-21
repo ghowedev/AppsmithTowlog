@@ -1,0 +1,14 @@
+SELECT t.id,
+       t.hold,
+       t.date,
+       t.time,
+       t.licenseplate,
+       makes.make,
+       t.model,
+       colors.color,
+       t.released
+FROM public.tows_policetow t
+JOIN public.enum_makes makes
+  ON t.make_id = makes.id
+JOIN public.enum_colors colors
+  ON t.color_id = colors.id;
