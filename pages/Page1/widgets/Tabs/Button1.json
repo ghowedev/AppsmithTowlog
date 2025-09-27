@@ -1,11 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 46,
+  "bottomRow": 8,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
-  "disabledWhenInvalid": true,
+  "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
@@ -14,31 +14,38 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "2o2zocx7d0",
-  "leftColumn": 51,
+  "key": "d029slnw8c",
+  "leftColumn": 0,
   "minWidth": 120,
-  "mobileBottomRow": 37,
-  "mobileLeftColumn": 46,
-  "mobileRightColumn": 62,
-  "mobileTopRow": 33,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 46,
-  "originalTopRow": 42,
-  "parentId": "2be1cbjzmx",
+  "onClick": "{{showModal(Modal1.name);}}",
+  "parentColumnSpace": 19.8125,
+  "parentId": "k3zq1ca5rb",
+  "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
-  "resetFormOnClick": true,
+  "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 62,
-  "text": "Submit",
-  "topRow": 42,
+  "rightColumn": 9,
+  "text": "Add Police Tow",
+  "topRow": 4,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "w49nszjubp",
-  "widgetName": "form_policetowsubmit"
+  "widgetId": "cset7zshf9",
+  "widgetName": "Button1"
 }

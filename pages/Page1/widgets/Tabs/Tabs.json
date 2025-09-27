@@ -58,52 +58,6 @@
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
       "bottomRow": 360,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-      "canExtend": true,
-      "detachFromLayout": true,
-      "dynamicBindingPathList": [
-        {
-          "key": "borderRadius"
-        },
-        {
-          "key": "boxShadow"
-        }
-      ],
-      "dynamicHeight": "AUTO_HEIGHT",
-      "dynamicTriggerPathList": [],
-      "flexLayers": [],
-      "isDisabled": false,
-      "isLoading": false,
-      "isVisible": true,
-      "key": "xzf7z2ikzw",
-      "leftColumn": 0,
-      "maxDynamicHeight": 9000,
-      "minDynamicHeight": 4,
-      "minHeight": 150,
-      "minWidth": 450,
-      "mobileBottomRow": 150,
-      "mobileLeftColumn": 0,
-      "mobileRightColumn": 402.5,
-      "mobileTopRow": 0,
-      "needsErrorInfo": false,
-      "parentColumnSpace": 1,
-      "parentId": "0ublwoy8cx",
-      "parentRowSpace": 1,
-      "renderMode": "CANVAS",
-      "responsiveBehavior": "fill",
-      "rightColumn": 402.5,
-      "shouldScrollContents": false,
-      "tabId": "tab2",
-      "tabName": "policetow",
-      "topRow": 0,
-      "type": "CANVAS_WIDGET",
-      "version": 1,
-      "widgetId": "idnh8i9807",
-      "widgetName": "Canvas3"
-    },
-    {
-      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 360,
-      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -116,6 +70,7 @@
         }
       ],
       "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
       "flexLayers": [],
       "isLoading": false,
       "isVisible": true,
@@ -137,7 +92,7 @@
       "responsiveBehavior": "fill",
       "rightColumn": 1288,
       "tabId": "tabqlru3vca0t",
-      "tabName": "testing",
+      "tabName": "policetow",
       "topRow": 1,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -145,7 +100,7 @@
       "widgetName": "Canvas5"
     }
   ],
-  "defaultTab": "testing",
+  "defaultTab": "POLICE TOW",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -173,7 +128,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 3,
   "needsErrorInfo": false,
-  "originalBottomRow": 76,
+  "originalBottomRow": 45,
   "originalTopRow": 5,
   "parentColumnSpace": 20.125,
   "parentId": "0",
@@ -192,19 +147,11 @@
       "positioning": "vertical",
       "widgetId": "0xyayzcw7s"
     },
-    "tab2": {
-      "id": "tab2",
-      "index": 1,
-      "isVisible": true,
-      "label": "Police Tow",
-      "positioning": "vertical",
-      "widgetId": "idnh8i9807"
-    },
     "tabqlru3vca0t": {
       "id": "tabqlru3vca0t",
-      "index": 2,
+      "index": 1,
       "isVisible": true,
-      "label": "testing",
+      "label": "POLICE TOW",
       "widgetId": "k3zq1ca5rb"
     }
   },

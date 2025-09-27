@@ -454,7 +454,7 @@
   "rightColumn": 63,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{Police_Tow_Display.data}}",
+  "tableData": "{{Police_Tow_Display_SELECT.data}}",
   "textSize": "0.875rem",
   "topRow": 7,
   "totalRecordsCount": 0,

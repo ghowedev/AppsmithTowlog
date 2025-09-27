@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "68cb2e854aac367c57e51c21_02e891d7-38bb-4610-b833-096107bece4f",
-  "id": "Page1_Police_Tow_Display",
+  "gitSyncId": "68cb2e854aac367c57e51c21_28f2c465-38b3-4d66-bd19-28ccc2bcd6a0",
+  "id": "Page1_Police_Tow_INSERT",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT t.id,\n       t.hold,\n       t.date,\n       t.time,\n       t.licenseplate,\n       makes.make,\n       t.model,\n       colors.color,\n       t.released\nFROM public.tows_policetow t\nJOIN public.enum_makes makes\n  ON t.make_id = makes.id\nJOIN public.enum_colors colors\n  ON t.color_id = colors.id;\n",
+      "body": "",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Police_Tow_Display",
+    "name": "Police_Tow_INSERT",
     "pageId": "Page1",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
