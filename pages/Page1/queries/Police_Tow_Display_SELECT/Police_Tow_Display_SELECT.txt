@@ -2,8 +2,10 @@ SELECT
     t.*,
     makes.make,
     states.state,
-    colors.color
+    colors.color,
+    reasons.reason
 FROM public.tows_policetow t
-JOIN public.enum_makes   makes  ON t.make_id = makes.id
-JOIN public.enum_colors  colors ON t.color_id = colors.id
-JOIN public.enum_states  states ON t.licensestate_id = states.id;
+JOIN public.enum_makes        makes   ON t.make_id = makes.id
+JOIN public.enum_colors       colors  ON t.color_id = colors.id
+JOIN public.enum_states       states  ON t.licensestate_id = states.id
+JOIN public.enum_towreasons   reasons ON t.towreason_id = reasons.id;
