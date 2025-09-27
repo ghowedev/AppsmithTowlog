@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -32,7 +36,7 @@
   "mobileRightColumn": 9,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal1.name);}}",
+  "onClick": "{{ resetWidget(\"reacttable\");\nshowModal(Modal1.name)}}",
   "parentColumnSpace": 19.8125,
   "parentId": "k3zq1ca5rb",
   "parentRowSpace": 10,
