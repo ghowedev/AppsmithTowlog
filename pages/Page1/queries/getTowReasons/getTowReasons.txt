@@ -1,0 +1,5 @@
+SELECT id, reason 
+FROM enum_towreasons
+UNION ALL
+SELECT id, reason 
+FROM custom_towreasons;
