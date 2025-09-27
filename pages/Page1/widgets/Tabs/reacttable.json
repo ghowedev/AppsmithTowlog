@@ -5,7 +5,7 @@
   "borderWidth": "1",
   "bottomRow": 34,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultModel": "{{ { \n    \"data\": Police_Tow_Display_SELECT.data,\n    \"selectedRow\": {} \n} }}\n",
+  "defaultModel": "{{ { \n    \"data\": Police_Tow_Display_SELECT.data,\n    \"selectedRow\": {} \n} }}",
   "dynamicBindingPathList": [
     {
       "key": "theme"

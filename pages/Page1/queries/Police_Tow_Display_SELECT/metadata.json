@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT t.id,\n       t.hold,\n       t.date,\n       t.time,\n       t.licenseplate,\n       makes.make,\n       t.model,\n       colors.color,\n       t.released\nFROM public.tows_policetow t\nJOIN public.enum_makes makes\n  ON t.make_id = makes.id\nJOIN public.enum_colors colors\n  ON t.color_id = colors.id;\n",
+      "body": "SELECT \n    t.*,\n    makes.make,\n    states.state,\n    colors.color\nFROM public.tows_policetow t\nJOIN public.enum_makes   makes  ON t.make_id = makes.id\nJOIN public.enum_colors  colors ON t.color_id = colors.id\nJOIN public.enum_states  states ON t.licensestate_id = states.id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
