@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68cb2e854aac367c57e51c21_853123e0-b3f2-40cc-9b45-8022f736baee",
-  "id": "Page1_getTowReasons",
+  "gitSyncId": "68cb2e854aac367c57e51c21_8c877919-7786-48e9-86d2-2f0a4acb5139",
+  "id": "Page1_getTowCompaniesPolice",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id, reason \nFROM enum_towreasons\nUNION ALL\nSELECT id, reason \nFROM custom_towreasons;",
+      "body": "SELECT id, company, phone, address\nFROM enum_towcompanies\nWHERE category = 'police'\nORDER BY company;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "getTowReasons",
+    "name": "getTowCompaniesPolice",
     "pageId": "Page1",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true

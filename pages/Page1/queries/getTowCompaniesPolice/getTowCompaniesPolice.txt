@@ -1,0 +1,4 @@
+SELECT id, company, phone, address
+FROM enum_towcompanies
+WHERE category = 'police'
+ORDER BY company;
