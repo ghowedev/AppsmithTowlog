@@ -1,11 +1,11 @@
 {
   "gitSyncId": "68cb2e854aac367c57e51c21_28f2c465-38b3-4d66-bd19-28ccc2bcd6a0",
-  "id": "Page1_Police_Tow_INSERT",
+  "id": "Page1_addPoliceTow",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "",
+      "body": "INSERT INTO tows_policetow (\n  date, time, location, make_id, model, color_id, vin,\n  licenseplate, licensestate_id, vehicleyear,\n  towreason_id, towcompany_id, towdate, hold, notes, released\n)\nVALUES (\n  '2025-10-04',\n  '14:35:00',\n  '987 Example Ave',\n  5,\n  'TESTMODEL',\n  4,\n  'VIN123456789EXAMPLE',\n  'TEST123',\n  7,\n  2020,\n  3,\n  3,\n  '2025-10-04',\n  true,\n  'Testing insert via Appsmith',\n  false\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Police_Tow_INSERT",
+    "name": "addPoliceTow",
     "pageId": "Page1",
     "runBehaviour": "MANUAL",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

@@ -36,7 +36,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(Modal1.name); resetWidget(Modal1.name);}}",
+  "onClick": "{{closeModal(Modal1.name);}}",
   "parentId": "dcb99bypq2",
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",

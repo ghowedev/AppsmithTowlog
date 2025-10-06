@@ -1,0 +1,23 @@
+INSERT INTO tows_policetow (
+  date, time, location, make_id, model, color_id, vin,
+  licenseplate, licensestate_id, vehicleyear,
+  towreason_id, towcompany_id, towdate, hold, notes, released
+)
+VALUES (
+  '2025-10-04',
+  '14:35:00',
+  '987 Example Ave',
+  5,
+  'TESTMODEL',
+  4,
+  'VIN123456789EXAMPLE',
+  'TEST123',
+  7,
+  2020,
+  3,
+  3,
+  '2025-10-04',
+  true,
+  'Testing insert via Appsmith',
+  false
+);

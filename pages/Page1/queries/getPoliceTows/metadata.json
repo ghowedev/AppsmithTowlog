@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68cb2e854aac367c57e51c21_02e891d7-38bb-4610-b833-096107bece4f",
-  "id": "Page1_Police_Tow_Display_SELECT",
+  "id": "Page1_getPoliceTows",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Police_Tow_Display_SELECT",
+    "name": "getPoliceTows",
     "pageId": "Page1",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "ON_PAGE_LOAD",
+    "userSetOnLoad": true
   }
 }
