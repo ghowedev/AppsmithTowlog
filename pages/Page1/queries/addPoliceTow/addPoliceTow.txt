@@ -1,23 +1,22 @@
 INSERT INTO tows_policetow (
-  date, time, location, make_id, model, color_id, vin,
+  location, make_id, model, color_id, vin,
   licenseplate, licensestate_id, vehicleyear,
   towreason_id, towcompany_id, towdate, hold, notes, released
 )
 VALUES (
-  '2025-10-04',
-  '14:35:00',
-  '987 Example Ave',
-  5,
-  'TESTMODEL',
-  4,
-  'VIN123456789EXAMPLE',
-  'TEST123',
-  7,
-  2020,
-  3,
-  3,
-  '2025-10-04',
-  true,
-  'Testing insert via Appsmith',
-  false
-);
+  {{ this.params.row.location }},
+  {{ this.params.row.make_id }},
+  {{ this.params.row.model }},
+  {{ this.params.row.color_id }},
+  {{ this.params.row.vin }},
+  {{ this.params.row.licenseplate }},
+  {{ this.params.row.licensestate_id }},
+  {{ this.params.row.vehicleyear }},
+  {{ this.params.row.towreason_id }},
+  {{ this.params.row.towcompany_id }},
+  {{ this.params.row.towdate }},
+  {{ this.params.row.hold }},
+  {{ this.params.row.notes }},
+  {{ this.params.row.released }}
+)
+RETURNING *;

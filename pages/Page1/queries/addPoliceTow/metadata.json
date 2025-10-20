@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO tows_policetow (\n  date, time, location, make_id, model, color_id, vin,\n  licenseplate, licensestate_id, vehicleyear,\n  towreason_id, towcompany_id, towdate, hold, notes, released\n)\nVALUES (\n  '2025-10-04',\n  '14:35:00',\n  '987 Example Ave',\n  5,\n  'TESTMODEL',\n  4,\n  'VIN123456789EXAMPLE',\n  'TEST123',\n  7,\n  2020,\n  3,\n  3,\n  '2025-10-04',\n  true,\n  'Testing insert via Appsmith',\n  false\n);",
+      "body": "INSERT INTO tows_policetow (\n  location, make_id, model, color_id, vin,\n  licenseplate, licensestate_id, vehicleyear,\n  towreason_id, towcompany_id, towdate, hold, notes, released\n)\nVALUES (\n  {{ this.params.row.location }},\n  {{ this.params.row.make_id }},\n  {{ this.params.row.model }},\n  {{ this.params.row.color_id }},\n  {{ this.params.row.vin }},\n  {{ this.params.row.licenseplate }},\n  {{ this.params.row.licensestate_id }},\n  {{ this.params.row.vehicleyear }},\n  {{ this.params.row.towreason_id }},\n  {{ this.params.row.towcompany_id }},\n  {{ this.params.row.towdate }},\n  {{ this.params.row.hold }},\n  {{ this.params.row.notes }},\n  {{ this.params.row.released }}\n)\nRETURNING *;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,7 +22,11 @@
       "name": "Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "name": "addPoliceTow",
     "pageId": "Page1",
     "runBehaviour": "MANUAL",
