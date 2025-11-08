@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    t.id,\n    to_char(t.date, 'MM-DD-YYYY') AS date,        -- formatted for UI\n    to_char(t.time, 'HH24MI')      AS time,       -- formatted as HHMM\n    t.location,\n    t.model,\n    t.vin,\n    t.licenseplate,\n    t.vehicleyear,\n    t.notes,\n    t.hold,\n    t.released,\n    makes.make,\n    states.state,\n    colors.color,\n    reasons.reason,\n    t.make_id,\n    t.color_id,\n    t.licensestate_id,\n    t.towreason_id,\n    t.towcompany_id,\n    t.towdate\nFROM public.tows_policetow t\nJOIN public.enum_makes        makes   ON t.make_id = makes.id\nJOIN public.enum_colors       colors  ON t.color_id = colors.id\nJOIN public.enum_states       states  ON t.licensestate_id = states.id\nJOIN public.enum_towreasons   reasons ON t.towreason_id = reasons.id;\n",
+      "body": "SELECT \n    t.id,\n\t\tt.dr,\n    to_char(t.date, 'MM-DD-YYYY') AS date,        -- formatted for UI\n    to_char(t.time, 'HH24MI')      AS time,       -- formatted as HHMM\n    t.model,\n    t.vin,\n    t.licenseplate,\n    t.vehicleyear,\n    t.notes,\n    t.hold,\n    t.released,\n    makes.make,\n    states.state,\n    colors.color,\n    reasons.reason,\n    t.make_id,\n    t.color_id,\n    t.licensestate_id,\n    t.towreason_id,\n    t.towcompany_id,\n    t.towdate\nFROM public.tows_policetow t\nJOIN public.enum_makes        makes   ON t.make_id = makes.id\nJOIN public.enum_colors       colors  ON t.color_id = colors.id\nJOIN public.enum_states       states  ON t.licensestate_id = states.id\nJOIN public.enum_towreasons   reasons ON t.towreason_id = reasons.id;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

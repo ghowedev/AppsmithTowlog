@@ -1,22 +1,31 @@
 INSERT INTO tows_policetow (
-  location, make_id, model, color_id, vin,
-  licenseplate, licensestate_id, vehicleyear,
-  towreason_id, towcompany_id, towdate, hold, notes, released
+  vin,
+  towcompany_id,
+  licenseplate,
+  licensestate_id,
+  vehicleyear,
+  make_id,
+  model,
+  color_id,
+  towreason_id,
+  hold,
+  notes,
+  released,
+	dr
 )
 VALUES (
-  {{ this.params.row.location }},
-  {{ this.params.row.make_id }},
-  {{ this.params.row.model }},
-  {{ this.params.row.color_id }},
-  {{ this.params.row.vin }},
-  {{ this.params.row.licenseplate }},
-  {{ this.params.row.licensestate_id }},
-  {{ this.params.row.vehicleyear }},
-  {{ this.params.row.towreason_id }},
+  '{{ this.params.row.vin }}',
   {{ this.params.row.towcompany_id }},
-  {{ this.params.row.towdate }},
-  {{ this.params.row.hold }},
-  {{ this.params.row.notes }},
-  {{ this.params.row.released }}
+  '{{ this.params.row.licenseplate }}',
+  {{ this.params.row.licensestate_id }},
+  '{{ this.params.row.vehicleyear }}',
+  {{ this.params.row.make_id }},
+  '{{ this.params.row.model }}',
+  {{ this.params.row.color_id }},
+  {{ this.params.row.towreason_id }},
+  {{ this.params.row.hold ? 'true' : 'false' }},
+  '{{ this.params.row.notes }}',
+  {{ this.params.row.released ? 'true' : 'false' }},
+	{{ this.params.row.dr }}
 )
 RETURNING *;

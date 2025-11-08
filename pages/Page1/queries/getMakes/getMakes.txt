@@ -1,0 +1,3 @@
+SELECT id, make
+FROM enum_makes
+ORDER BY make;

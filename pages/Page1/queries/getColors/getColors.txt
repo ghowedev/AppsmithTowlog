@@ -1,0 +1,3 @@
+SELECT id, color
+FROM enum_colors
+ORDER BY color;

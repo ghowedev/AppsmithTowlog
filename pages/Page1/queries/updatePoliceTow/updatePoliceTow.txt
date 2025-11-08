@@ -1,0 +1,17 @@
+UPDATE tows_policetow
+SET
+  vin = '{{ this.params.row.vin }}',
+  towcompany_id = {{ this.params.row.towcompany_id }},
+  licenseplate = '{{ this.params.row.licenseplate }}',
+  licensestate_id = {{ this.params.row.licensestate_id }},
+  vehicleyear = '{{ this.params.row.vehicleyear }}',
+  make_id = {{ this.params.row.make_id }},
+  model = '{{ this.params.row.model }}',
+  color_id = {{ this.params.row.color_id }},
+  towreason_id = {{ this.params.row.towreason_id }},
+  hold = {{ this.params.row.hold ? 'true' : 'false' }},
+  notes = '{{ this.params.row.notes }}',
+  released = {{ this.params.row.released ? 'true' : 'false' }},
+  dr = {{ this.params.row.dr }}
+WHERE id = {{ this.params.row.id }}
+RETURNING *;

@@ -1,8 +1,8 @@
 SELECT 
     t.id,
+		t.dr,
     to_char(t.date, 'MM-DD-YYYY') AS date,        -- formatted for UI
     to_char(t.time, 'HH24MI')      AS time,       -- formatted as HHMM
-    t.location,
     t.model,
     t.vin,
     t.licenseplate,

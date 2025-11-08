@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO tows_policetow (\n  location, make_id, model, color_id, vin,\n  licenseplate, licensestate_id, vehicleyear,\n  towreason_id, towcompany_id, towdate, hold, notes, released\n)\nVALUES (\n  {{ this.params.row.location }},\n  {{ this.params.row.make_id }},\n  {{ this.params.row.model }},\n  {{ this.params.row.color_id }},\n  {{ this.params.row.vin }},\n  {{ this.params.row.licenseplate }},\n  {{ this.params.row.licensestate_id }},\n  {{ this.params.row.vehicleyear }},\n  {{ this.params.row.towreason_id }},\n  {{ this.params.row.towcompany_id }},\n  {{ this.params.row.towdate }},\n  {{ this.params.row.hold }},\n  {{ this.params.row.notes }},\n  {{ this.params.row.released }}\n)\nRETURNING *;",
+      "body": "INSERT INTO tows_policetow (\n  vin,\n  towcompany_id,\n  licenseplate,\n  licensestate_id,\n  vehicleyear,\n  make_id,\n  model,\n  color_id,\n  towreason_id,\n  hold,\n  notes,\n  released,\n\tdr\n)\nVALUES (\n  '{{ this.params.row.vin }}',\n  {{ this.params.row.towcompany_id }},\n  '{{ this.params.row.licenseplate }}',\n  {{ this.params.row.licensestate_id }},\n  '{{ this.params.row.vehicleyear }}',\n  {{ this.params.row.make_id }},\n  '{{ this.params.row.model }}',\n  {{ this.params.row.color_id }},\n  {{ this.params.row.towreason_id }},\n  {{ this.params.row.hold ? 'true' : 'false' }},\n  '{{ this.params.row.notes }}',\n  {{ this.params.row.released ? 'true' : 'false' }},\n\t{{ this.params.row.dr }}\n)\nRETURNING *;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
